@@ -6,6 +6,8 @@
         xmlns:local="clr-namespace:LastExamen"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         Background="{DynamicResource MaterialDesignPaper}"
+        Title="Result" Height="717" Width="679">
+    <Grid Margin="6,0,0,0">
         mc:Ignorable="d"
         Title="Result" Height="450" Width="800">
     <Grid>
