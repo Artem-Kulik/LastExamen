@@ -13,6 +13,6 @@
             <RowDefinition Height="85*"/>
             <RowDefinition Height="258*"/>
         </Grid.RowDefinitions>
-        
+        <TextBlock>You are</TextBlock>
     </Grid>
 </Window>
