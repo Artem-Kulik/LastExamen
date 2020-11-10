@@ -4,11 +4,22 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LastExamen"
-        mc:Ignorable="d"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         Background="{DynamicResource MaterialDesignPaper}"
-        Title="Result" Height="717" Width="679">
+        mc:Ignorable="d"
+        Title="Result" Height="450" Width="800">
     <Grid>
         <Button>new 5</Button>
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="85*"/>
+            <RowDefinition Height="258*"/>
+        </Grid.RowDefinitions>
+        <TextBlock>You</TextBlock>       
+
+        <Button>Click</Button>
+
+
     </Grid>
 </Window>
