@@ -9,6 +9,14 @@
         mc:Ignorable="d"
         Title="Result" Height="450" Width="800">
     <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="85*"/>
+            <RowDefinition Height="258*"/>
+        </Grid.RowDefinitions>
+        <TextBlock>You</TextBlock>       
+
         <Button>Click</Button>
+
     </Grid>
 </Window>
