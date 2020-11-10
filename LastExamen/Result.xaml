@@ -9,6 +9,6 @@
         Background="{DynamicResource MaterialDesignPaper}"
         Title="Result" Height="717" Width="679">
     <Grid>
-        <Button>1</Button>
+        <Button>2</Button>
     </Grid>
 </Window>
