@@ -19,9 +19,16 @@ namespace LastExamen
     /// </summary>
     public partial class Result : Window
     {
-        public Result()
+        public Result(float a, float b, float c, float d)
         {
             InitializeComponent();
+
+            string res = "Result:\n";
+            res += "Sanguine = " + a.ToString() + "%\n";
+            res += "Phlegmatic = " + b.ToString() + "%\n";
+            res += "Choleric = " + c.ToString() + "%\n";
+            res += "Melancholic = " + d.ToString() + "%\n";
+            MessageBox.Show(res);
         }
     }
 }

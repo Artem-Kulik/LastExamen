@@ -92,19 +92,17 @@ namespace LastExamen
                 {
                      if (answers[i] == true)
                     {
-                        if (temperaments[i] == "temp1") a++;
-                        if (temperaments[i] == "temp2") b++;
-                        if (temperaments[i] == "temp3") c++;
-                        if (temperaments[i] == "temp4") d++;
+                        if (temperaments[i] == "Sanguine") a++;
+                        if (temperaments[i] == "Phlegmatic") b++;
+                        if (temperaments[i] == "Choleric") c++;
+                        if (temperaments[i] == "Melancholic") d++;
                     }
                 }
-                float mark = 100 / (a + b + c + d);
-                string res = "Result:\n";
-                res += "temp 1 = " + (mark * a).ToString() + "%\n";
-                res += "temp 2 = " + (mark * b).ToString() + "%\n";
-                res += "temp 3 = " + (mark * c).ToString() + "%\n";
-                res += "temp 4 = " + (mark * d).ToString() + "%\n";
-                MessageBox.Show(res);
+                float mark = 100 / (a + b + c + d);               
+
+                Result r = new Result(mark * a, mark * b, mark * c, mark * d);
+                r.Show();
+                this.Close();
             }
         }
 

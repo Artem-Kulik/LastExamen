@@ -8,7 +8,7 @@
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         Background="{DynamicResource MaterialDesignPaper}"
         Title="Result" Height="717" Width="679">
-    <Grid Margin="14,34,13,0">
+    <Grid>
 
     </Grid>
 </Window>
