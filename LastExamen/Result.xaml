@@ -9,6 +9,8 @@
         mc:Ignorable="d"
         Title="Result" Height="450" Width="800">
     <Grid>
+        <Button>new 5</Button>
+
 
         <Grid.RowDefinitions>
             <RowDefinition Height="85*"/>
@@ -17,6 +19,7 @@
         <TextBlock>You</TextBlock>       
 
         <Button>Click</Button>
+
 
     </Grid>
 </Window>
