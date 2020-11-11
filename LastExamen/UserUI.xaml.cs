@@ -23,10 +23,11 @@ namespace LastExamen
     public partial class UserUI : Window
     {
         readonly BLLClass b = new BLLClass();
-
+        UserDTO user;
         public UserUI(UserDTO u)
         {
             InitializeComponent();
+            user = u;
             Text.Text = "Welcome " + u.Name;
             if (b.AllQuestions() == null) return;
             foreach (var it in b.AllQuestions())
@@ -59,7 +60,6 @@ namespace LastExamen
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
             if (Next.Content.ToString() != "Show result")
             {
                 if (Yes.IsChecked == true || No.IsChecked == true)
@@ -85,12 +85,12 @@ namespace LastExamen
             {
                 if (Yes.IsChecked == true || No.IsChecked == true)
 
-                answers.Add(i, Yes.IsChecked == true ? true : false);
+                    answers.Add(i, Yes.IsChecked == true ? true : false);
 
                 int a = 0, b = 0, c = 0, d = 0;
                 for (int i = 0; i < MAX; i++)
                 {
-                     if (answers[i] == true)
+                    if (answers[i] == true)
                     {
                         if (temperaments[i] == "Sanguine") a++;
                         if (temperaments[i] == "Phlegmatic") b++;
@@ -98,9 +98,9 @@ namespace LastExamen
                         if (temperaments[i] == "Melancholic") d++;
                     }
                 }
-                float mark = 100 / (a + b + c + d);               
+                float mark = 100 / (a + b + c + d);
 
-                Result r = new Result(mark * a, mark * b, mark * c, mark * d);
+                Result r = new Result(mark * a, mark * b, mark * c, mark * d, user);
                 r.Show();
                 this.Close();
             }

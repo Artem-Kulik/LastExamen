@@ -41,6 +41,9 @@
         public int PhlegmaticPercent { get; set; }
         public int CholericPercent { get; set; }
         public int MelancholicPercent { get; set; }
+                
+        public int? UserId { get; set; }
+
 
         public virtual User User { get; set; }
     }
@@ -51,6 +54,8 @@
         [Required]
         public string Text { get; set; }
         public int TemperamentId { get; set; }
+        public int? TemperamentAntonimID { get; set; }
+
         public virtual Temperament Temperament { get; set; }
     }
 

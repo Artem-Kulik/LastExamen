@@ -11,12 +11,19 @@ namespace DAL
         IQueryable<User> AllUsers();
         IQueryable<Question> AllQuestions();
         void AddUser(User u);
+        void AddResult(Result u);
         User Login(string log, string pas);
     }
 
     public class DALClass : IDAL
     {
         private readonly TestModel c = new TestModel();
+
+        public void AddResult(Result u)
+        {
+            c.Results.Add(u);
+            c.SaveChanges();
+        }
 
         public void AddUser(User u)
         {
