@@ -52,12 +52,36 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DALClass.cs" />
+    <Compile Include="Migrations\202011092138585_InitialCreate.cs" />
+    <Compile Include="Migrations\202011092138585_InitialCreate.designer.cs">
+      <DependentUpon>202011092138585_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011111309284_AddUserId.cs" />
+    <Compile Include="Migrations\202011111309284_AddUserId.designer.cs">
+      <DependentUpon>202011111309284_AddUserId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011111311585_AddTemperamentAntonimID.cs" />
+    <Compile Include="Migrations\202011111311585_AddTemperamentAntonimID.designer.cs">
+      <DependentUpon>202011111311585_AddTemperamentAntonimID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202011092138585_InitialCreate.resx">
+      <DependentUpon>202011092138585_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011111309284_AddUserId.resx">
+      <DependentUpon>202011111309284_AddUserId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011111311585_AddTemperamentAntonimID.resx">
+      <DependentUpon>202011111311585_AddTemperamentAntonimID.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

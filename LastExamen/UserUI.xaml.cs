@@ -23,10 +23,11 @@ namespace LastExamen
     public partial class UserUI : Window
     {
         readonly BLLClass b = new BLLClass();
-
+        UserDTO user;
         public UserUI(UserDTO u)
         {
             InitializeComponent();
+            user = u;
             Text.Text = "Welcome " + u.Name;
             if (b.AllQuestions() == null) return;
             foreach (var it in b.AllQuestions())
@@ -59,7 +60,6 @@ namespace LastExamen
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
             if (Next.Content.ToString() != "Show result")
             {
                 if (Yes.IsChecked == true || No.IsChecked == true)
@@ -85,26 +85,24 @@ namespace LastExamen
             {
                 if (Yes.IsChecked == true || No.IsChecked == true)
 
-                answers.Add(i, Yes.IsChecked == true ? true : false);
+                    answers.Add(i, Yes.IsChecked == true ? true : false);
 
                 int a = 0, b = 0, c = 0, d = 0;
                 for (int i = 0; i < MAX; i++)
                 {
-                     if (answers[i] == true)
+                    if (answers[i] == true)
                     {
-                        if (temperaments[i] == "temp1") a++;
-                        if (temperaments[i] == "temp2") b++;
-                        if (temperaments[i] == "temp3") c++;
-                        if (temperaments[i] == "temp4") d++;
+                        if (temperaments[i] == "Sanguine") a++;
+                        if (temperaments[i] == "Phlegmatic") b++;
+                        if (temperaments[i] == "Choleric") c++;
+                        if (temperaments[i] == "Melancholic") d++;
                     }
                 }
                 float mark = 100 / (a + b + c + d);
-                string res = "Result:\n";
-                res += "temp 1 = " + (mark * a).ToString() + "%\n";
-                res += "temp 2 = " + (mark * b).ToString() + "%\n";
-                res += "temp 3 = " + (mark * c).ToString() + "%\n";
-                res += "temp 4 = " + (mark * d).ToString() + "%\n";
-                MessageBox.Show(res);
+
+                Result r = new Result(mark * a, mark * b, mark * c, mark * d, user);
+                r.Show();
+                this.Close();
             }
         }
 

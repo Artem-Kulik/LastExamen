@@ -29,6 +29,16 @@ namespace BLL
         public int Id { get; set; }
         public string Name { get; set; }
     }
+    public class ResultDTO
+    {
+        public int Id { get; set; }
+
+        public int SanguinePercent { get; set; }
+        public int PhlegmaticPercent { get; set; }
+        public int CholericPercent { get; set; }
+        public int MelancholicPercent { get; set; }
+        public int? UserId { get; set; }
+    }
 
     public interface IDLL
     {
@@ -36,6 +46,7 @@ namespace BLL
         IEnumerable<QuestionDTO> AllQuestions();
 
         void AddUser(UserDTO u);
+        void AddResult(ResultDTO u);
         UserDTO Login(string log, string pas);
     }
 
@@ -52,7 +63,9 @@ namespace BLL
                     cfg.CreateMap<UserDTO, User>();
                     cfg.CreateMap<User, UserDTO>();
                     cfg.CreateMap<Question, QuestionDTO>().ForMember(src => src.TemperamentName, opt => opt.MapFrom(res => res.Temperament.Name)); ;
-                    cfg.CreateMap<Temperament, TemperamentDTO>();
+                    cfg.CreateMap<Temperament, TemperamentDTO>(); 
+                    cfg.CreateMap<Result, ResultDTO>();
+                    cfg.CreateMap<ResultDTO, Result>();
                 });
 
             mapper = new Mapper(config);
@@ -76,6 +89,11 @@ namespace BLL
         public UserDTO Login(string log, string pas)
         {
             return mapper.Map<UserDTO>(p.Login(log, pas));
+        }
+
+        public void AddResult(ResultDTO u)
+        {
+            p.AddResult(mapper.Map<Result>(u));
         }
     }
 }

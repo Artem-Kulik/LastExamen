@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         Background="{DynamicResource MaterialDesignPaper}"
-        Title="UserUI" Height="600" Width="500">
+        Title="UserUI" Height="600" Width="500" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -23,7 +23,7 @@
         <TextBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" x:Name="Text" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22">Welcome</TextBox>
         <Button Grid.ColumnSpan="2" MinHeight="50" Margin="100,0,100,0" Grid.Row="1" Grid.Column="0" FontSize="22" Click="Button_Click">Start the test</Button>
 
-        <TextBlock Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" x:Name="Question" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="36" FontFamily="Sitka Display">Question</TextBlock>
+        <TextBlock TextWrapping="Wrap" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" x:Name="Question" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="36" FontFamily="Sitka Display">Question</TextBlock>
         <RadioButton x:Name="Yes" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="0" FontSize="20">Yes</RadioButton>
         <RadioButton x:Name="No" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="1" FontSize="20">No</RadioButton>
 
