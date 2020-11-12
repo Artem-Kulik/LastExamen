@@ -52,10 +52,18 @@ namespace LastExamen
                 UserDTO u = b.Login(Login.Text, Password.Text);
                 if (u != null)
                 {
-                    this.Hide();
-                    UserUI ui = new UserUI(u);
-                    ui.Show();
-
+                    if (u.Admin == false)
+                    {
+                        this.Hide();
+                        UserUI ui = new UserUI(u);
+                        ui.Show();
+                    }
+                    else
+                    {
+                        AdminUI a = new AdminUI(u);
+                        a.Show();
+                        this.Close();
+                    }
                     Name.IsEnabled = false;
                     Login.IsEnabled = false;
                     Password.IsEnabled = false;

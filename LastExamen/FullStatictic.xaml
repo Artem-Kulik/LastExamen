@@ -1,0 +1,42 @@
+﻿<Window x:Class="LastExamen.FullStatictic"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LastExamen"
+        mc:Ignorable="d"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        Title="FullStatictic" Height="712" Width="559"  WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" FontFamily="SimSun" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">Sanguine</TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="1" FontFamily="SimSun" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">Phlegmatic</TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="2" FontFamily="SimSun" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">Choleric</TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="3" FontFamily="SimSun" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">Melancholic</TextBlock>
+
+        <ProgressBar x:Name="S1" Value="50" Orientation="Vertical" Grid.Row="1" Grid.Column="0" Foreground="#FF00A4F3" Background="#FF708087" SmallChange="1"></ProgressBar>
+        <ProgressBar x:Name="P1" Value="50" Orientation="Vertical" Grid.Row="1" Grid.Column="1" Foreground="#FF00A4F3" Background="#FF708087" SmallChange="1"></ProgressBar>
+        <ProgressBar x:Name="C1" Value="50" Orientation="Vertical" Grid.Row="1" Grid.Column="2" Foreground="#FF00A4F3" Background="#FF708087" SmallChange="1"></ProgressBar>
+        <ProgressBar x:Name="M1" Value="50" Orientation="Vertical" Grid.Row="1" Grid.Column="3" Foreground="#FF00A4F3" Background="#FF708087" SmallChange="1"></ProgressBar>
+
+        <TextBlock x:Name="S" Grid.Row="2" Grid.Column="0" FontFamily="SimSun" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">%</TextBlock>
+        <TextBlock x:Name="P" Grid.Row="2" Grid.Column="1" FontFamily="SimSun" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">%</TextBlock>
+        <TextBlock x:Name="C" Grid.Row="2" Grid.Column="2" FontFamily="SimSun" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">%</TextBlock>
+        <TextBlock x:Name="M" Grid.Row="2" Grid.Column="3" FontFamily="SimSun" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">%</TextBlock>
+
+        <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" FontFamily="SimSun" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click">Back</Button>
+
+    </Grid>
+</Window>

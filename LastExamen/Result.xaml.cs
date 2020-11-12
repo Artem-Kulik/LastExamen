@@ -104,6 +104,13 @@ namespace LastExamen
             client.SendAsync(message, "Artem`s token");
         }
 
+        private void Button_Click_8(object sender, RoutedEventArgs e)
+        {
+            AllResults all = new AllResults(a1, b1, c1, d1, user);
+            all.Show();
+            this.Close();
+        }
+
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             i = 2;

@@ -1,0 +1,27 @@
+﻿<Window x:Class="LastExamen.AdminUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LastExamen"
+        mc:Ignorable="d"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        Title="AdminUI"  WindowStartupLocation="CenterScreen" Height="567" Width="554">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Verdana" MinHeight="40" Click="Button_Click">Start test</Button>
+        <Button Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Verdana" MinHeight="40" Click="Button_Click_2">Show result statistic</Button>
+        <Button Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Verdana" MinHeight="40" Click="Button_Click_3">Add question</Button>
+        <Button Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Verdana" MinHeight="40" Click="Button_Click_5">Edit questions</Button>
+        <Button Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Verdana" MinHeight="40" Click="Button_Click_4">Add admin</Button>
+        <Button Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Verdana" MinHeight="40" Click="Button_Click_1">Close</Button>
+    </Grid>
+</Window>

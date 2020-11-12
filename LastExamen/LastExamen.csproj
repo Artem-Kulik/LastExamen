@@ -71,6 +71,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddAdmin.xaml.cs">
+      <DependentUpon>AddAdmin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddQuestion.xaml.cs">
+      <DependentUpon>AddQuestion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI.xaml.cs">
+      <DependentUpon>AdminUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AllResults.xaml.cs">
+      <DependentUpon>AllResults.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditQuestions.xaml.cs">
+      <DependentUpon>EditQuestions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditUI.xaml.cs">
+      <DependentUpon>EditUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FullStatictic.xaml.cs">
+      <DependentUpon>FullStatictic.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Result.xaml.cs">
       <DependentUpon>Result.xaml</DependentUpon>
     </Compile>
@@ -80,6 +101,34 @@
     <Compile Include="UserUI.xaml.cs">
       <DependentUpon>UserUI.xaml</DependentUpon>
     </Compile>
+    <Page Include="AddAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddQuestion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AllResults.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditQuestions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FullStatictic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -136,6 +185,10 @@
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{15993D54-318D-48D2-BC27-3336242705B9}</Project>
       <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{EF2A0562-DEF2-4D53-BB02-44DFDBDCA999}</Project>
+      <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

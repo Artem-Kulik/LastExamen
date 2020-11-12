@@ -21,13 +21,15 @@
             <RowDefinition Height="51*"/>
         </Grid.RowDefinitions>
         <TextBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" x:Name="Text" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22">Welcome</TextBox>
-        <Button Grid.ColumnSpan="2" MinHeight="50" Margin="100,0,100,0" Grid.Row="1" Grid.Column="0" FontSize="22" Click="Button_Click">Start the test</Button>
+        <Button MinHeight="50" Margin="20, 0, 20, 0" Grid.Row="1" Grid.Column="0" FontSize="22" Click="Button_Click">Start the test</Button>
+        <Button MinHeight="50" Margin="20, 0, 20, 0" Grid.Row="1" Grid.Column="1" FontSize="22" Click="Button_Click_3">Edit own data</Button>
 
         <TextBlock TextWrapping="Wrap" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" x:Name="Question" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="36" FontFamily="Sitka Display">Question</TextBlock>
         <RadioButton x:Name="Yes" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="0" FontSize="20">Yes</RadioButton>
         <RadioButton x:Name="No" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="1" FontSize="20">No</RadioButton>
 
         <Button IsEnabled="False" x:Name="Next" MinHeight="50" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" FontSize="22" Click="Button_Click_1">next</Button>
+        <Button x:Name="Back" IsEnabled="False" MinHeight="50" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" FontSize="22" Click="Back_Click">Back</Button>
         <Button x:Name="Prew" IsEnabled="False" MinHeight="50" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" FontSize="22" Click="Button_Click_2">prew</Button>
 
     </Grid>

@@ -28,12 +28,14 @@ namespace LastExamen
         {
             InitializeComponent();
             user = u;
+            if (u.Admin == true) Back.IsEnabled = true;
             Text.Text = "Welcome " + u.Name;
             if (b.AllQuestions() == null) return;
             foreach (var it in b.AllQuestions())
             {
                 questions.Add(i, it.Text);
                 temperaments.Add(i, it.TemperamentName);
+                temperamentantonyms.Add(i, it.TemperamentAntonimID);
                 i++;
             }
             MAX = i;
@@ -45,6 +47,8 @@ namespace LastExamen
         Dictionary<int, bool> answers = new Dictionary<int, bool>();
         Dictionary<int, string> questions = new Dictionary<int, string>();
         Dictionary<int, string> temperaments = new Dictionary<int, string>();
+        Dictionary<int, int> temperamentantonyms = new Dictionary<int, int>();
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -97,6 +101,13 @@ namespace LastExamen
                         if (temperaments[i] == "Choleric") c++;
                         if (temperaments[i] == "Melancholic") d++;
                     }
+                    else 
+                    {
+                        if (temperamentantonyms[i] == 1) a++;
+                        if (temperamentantonyms[i] == 2) b++;
+                        if (temperamentantonyms[i] == 3) c++;
+                        if (temperamentantonyms[i] == 4) d++;
+                    }
                 }
                 float mark = 100 / (a + b + c + d);
 
@@ -124,6 +135,20 @@ namespace LastExamen
                 i--;
                 Question.Text = questions[i];
             }
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            EditUI edit = new EditUI(user);
+            edit.Show();
+            this.Close();
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            AdminUI a = new AdminUI(user);
+            a.Show();
+            this.Close();
         }
     }
 }
